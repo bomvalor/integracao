@@ -18,7 +18,7 @@ Depois de criadas as páginas você precisa enviar para nós o endereço em que 
 
 ## Leilões
 
-A primeira página que você precisa criar é a que mostrará os dados dos leilões. Esta página deve conter um arquivo JSON com os dados do leilão.
+A primeira página que você precisa criar é a que mostrará os dados dos leilões. Esta página deve conter um arquivo JSON com todas as informações dos leilões.
 
 Para facilitar a validação e a identificação precoce de erros nesse arquivo nós criamos um schema JSON para este JSON.
 Um schema define o formato do arquivo, como quais os campos, tipos de dados e tamanho máximo permitidos.
