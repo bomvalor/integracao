@@ -135,9 +135,9 @@ O formato do arquivo é parecido com o arquivo de leilões. Também é um array 
 
 - **qtd_visualizacoes**: Número de visitas que o lote recebeu no seu site. Valor númerico inteiro.
 
-- **subcategoria (obrigatório)**:
+- **subcategoria (obrigatório)**: Nome da categoria em que será incluído o lote. String com máximo de 100 caracteres.
 
-- **imagens**:
+- **imagens**: Lista de urls das imagens do lote.
 
 
 Você encontra o schema do objeto lote em **schemas/lote.json**.
