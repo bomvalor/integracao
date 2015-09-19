@@ -1,6 +1,6 @@
 # Bomvalor.com
 
-O [Bomvalor.com](http://bomvalor.com) é um site que reúne as melhores ofertas em leilões oficiais na Internet e facilita.
+O [Bomvalor.com](http://bomvalor.com) é um site que reúne as melhores ofertas em leilões oficiais na Internet.
 
 Nós estamos sempre abertos a novas parcerias e a publicação de novos leilões. Por isso criamos este documento para ajudá-lo a preparar os seus leilões para serem publicados no Bomvalor. Se ainda houver alguma dúvida mande para nós no email [contato@bomvalor.com](contato@bomvalor.com).
 
