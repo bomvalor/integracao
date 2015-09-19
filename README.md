@@ -27,24 +27,26 @@ A primeira página que você precisa criar é a que mostrará os dados dos leil�
 
 - **url (obrigatório)**: Endereço da página com detalhes do leilão. Precisa ser uma URL válida com tamanho máximo de 200 caracteres.
 
-- **titulo (obrigatório)**: String, tamanho máximo 100 caracteres.
+- **titulo (obrigatório)**: Descriçao curta do Leilão. String com tamanho máximo de 100 caracteres.
 
-- **descricao**: String, tamanho máximo 1000 caracteres.
+- **descricao**: Descrição mais completa do leilão. String com tamanho máximo de 1000 caracteres.
 
-- **datahora_abertura**: String com data e hora no formato rfc3339.
+- **leiloeiro**: Nome do leiloeiro responsável pelo leilão. String com tamanho máximo de 70 caracteres.
 
-- **datahora_encerramento (obrigatório)**: String com data e hora no formato
+- **datahora_abertura**: Data e hora de abertura do leilão. String com data e hora no formato rfc3339.
+
+- **datahora_encerramento (obrigatório)**: Data e hora de encerramento do leilão. String com data e hora no formato
 rfc3339.
 
 - **cidade**: Nome da cidade onde será realizado o leilão. String com tamanho máximo de 70 caracteres.
 
-- **estado**: UF onde será realizado o leilão. Informe a sigla com 2 caracteres em maiúsculo.
+- **estado**: UF onde será realizado o leilão. Deve ser informada a sigla do estado com 2 caracteres em maiúsculo.
 
 - **endereco**: Endereço onde será realizado o leilão. Apenas para leilões presenciais.String com tamanho máximo de 150 caracteres.
 
-- **online**: Campo boolean que indica se os compradores poderão enviar lances online. O valor default para este campo é **true**.
+- **online**: Campo boolean que indica se os compradores poderão enviar lances online. O valor padrão para este campo quando não informado é **true**.
 
-- **presencial**: Campo boolean que indica se o leilão será realizado presencialmente. O valor default para este campo é **false**.
+- **presencial**: Campo boolean que indica se o leilão será realizado presencialmente. O valor padrão para este campo quando não informado é **false**.
 
 
 Para facilitar a validação e a identificação precoce de erros nesse arquivo nós criamos um schema JSON para este JSON.
@@ -88,8 +90,57 @@ Abaixo  está um exemplo de como ficará o seu arquivo. Observe que os acentos e
 
 ## Lotes
 
-O formato do arquivo é parecido com o arquivo de leilões. Também é um array de objetos e cada objeto deverá respeitar o schema definido no arquivo **schemas/lote.json**.
+O formato do arquivo é parecido com o arquivo de leilões. Também é um array de objetos. Abaixo a descrição dos campos do objeto.
 
+
+### Descrição dos campos
+
+- **id_lote (obrigatório)**: Id do lote. String com tamanho máximo de 64 caracteres.
+
+- **id_leilao (obrigatório)**: Id do leilão em que este lote será leiloado. String com tamanho máximo de 64.
+
+- **url (obrigatório)**: Endereço da página com detalhes do lote. Precisa ser uma URL válida com tamanho máximo de 200 caracteres.
+
+- **numero_lote (obrigatório)**: Número do lote. String com tamanho máximo de 20 caracteres.
+
+- **titulo (obrigatório)**: Descrição curta do lote. String com tamanho máximo de 100 caracteres.
+
+- **descricao (obrigatório)**: Descrição mais completa do lote. String com tamanho máximo de 1000 caracteres.
+
+- **comitente**: Nome do comitente deste lote. String com tamanho máximo de 70 caracteres.
+
+- **status (obrigatório)** (Obrigatório): Status atual do lote. Este campo precisa ter um dos seguintes valores: *"disponivel"*, *"encerrado"*, *"suspenso"*, *"arrematado"* ou *"propostas"*.
+
+- **visitacao_permitida**: Campo boolean que indica se é permitida a visitação ao lote. O valor padrão para este campo quando não informado é **true**.
+
+- **datahora_abertura**: Data e hora de abertura do lote. Para lotes com 2 praças está será a data de abertura da primeira praça. String com data e hora no formato rfc3339.
+
+- **datahora_encerramento (obrigatório)**: Data e hora de encerramento do lote. Para lotes com 2 praças está será a data de encerramento da primeira praça. String com data e hora no formato rfc3339.
+
+- **valor_lance_inicial (obrigatório)**: Valor do lance inicial do lote. Valor numérico com 2 casas decimais e decimais separados por ponto. Para lances com 2 praças este é o valor inicial da primeira praça.
+
+- **datahora_abertura_2**: Data e hora de abertura da segunda praça do lote. String com data e hora no formato rfc3339.
+
+- **datahora_encerramento_2**: Data e hora de encerramento da segunda praça do lote. String com data e hora no formato rfc3339.
+
+- **valor_lance_inicial_2**: Valor do lance inicial da segunda praça do lote. Valor numérico com 2 casas decimais e decimais separados por ponto.
+
+- **valor_lance_atual (obrigatório)**: Valor atual do lote. Valor numérico com 2 casas decimais e decimais separados por ponto.
+
+- **nome_cidade (obrigatório)**: Nome da cidade onde está localizado o lote. String com tamanho máximo de 70 caracteres.
+
+- **estado (obrigatório)**: UF onde está localizado o lote. Deve ser informada a sigla do estado com 2 caracteres em maiúsculo.
+
+- **qtd_lances (obrigatório)**: Número de lances que o lote já recebeu. Valor numérico inteiro.
+
+- **qtd_visualizacoes**: Número de visitas que o lote recebeu no seu site. Valor númerico inteiro.
+
+- **subcategoria (obrigatório)**:
+
+- **imagens**:
+
+
+Você encontra o schema do objeto lote em **schemas/lote.json**.
 
 ### Arquivo de exemplo:
 

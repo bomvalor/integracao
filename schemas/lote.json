@@ -27,10 +27,6 @@
       "type": "string",
       "maxLength": 3000
     },
-    "leiloeiro": {
-      "type": "string",
-      "maxLength": 70
-    },
     "comitente": {
       "type": "string",
       "maxLength": 70
@@ -76,10 +72,6 @@
       "type": "string",
       "pattern": "(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)"
     },
-    "endereco": {
-      "type": "string",
-      "maxLength": 150
-    },
     "qtd_lances": {
       "type": "number"
     },
@@ -113,13 +105,12 @@
     "titulo",
     "descricao",
     "status",
-    "visitacao_permitida",
-    "valor_lance_inicial",
     "datahora_encerramento",
+    "valor_lance_inicial",
     "valor_lance_atual",
-    "qtd_lances",
     "nome_cidade",
     "estado",
+    "qtd_lances",
     "subcategoria"
   ]
 }
