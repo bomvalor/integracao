@@ -39,6 +39,12 @@
     "endereco": {
       "type": "string",
       "maxLength": 150
+    },
+    "online": {
+      "type": "boolean"
+    },
+    "presencial": {
+      "type": "boolean"
     }
   },
   "required": ["id_leilao", "url", "titulo", "datahora_encerramento"]

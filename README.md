@@ -20,6 +20,33 @@ Depois de criadas as páginas você precisa enviar para nós o endereço em que 
 
 A primeira página que você precisa criar é a que mostrará os dados dos leilões. Esta página deve conter um arquivo JSON com todas as informações dos leilões.
 
+
+### Descrição dos campos
+
+- **id_leilao (obrigatório)**: Id do leilão que será usado para relacionar os lotes aos leilões. String com tamanho máximo de 64.
+
+- **url (obrigatório)**: Endereço da página com detalhes do leilão. Precisa ser uma URL válida com tamanho máximo de 200 caracteres.
+
+- **titulo (obrigatório)**: String, tamanho máximo 100 caracteres.
+
+- **descricao**: String, tamanho máximo 1000 caracteres.
+
+- **datahora_abertura**: String com data e hora no formato rfc3339.
+
+- **datahora_encerramento (obrigatório)**: String com data e hora no formato
+rfc3339.
+
+- **cidade**: Nome da cidade onde será realizado o leilão. String com tamanho máximo de 70 caracteres.
+
+- **estado**: UF onde será realizado o leilão. Informe a sigla com 2 caracteres em maiúsculo.
+
+- **endereco**: Endereço onde será realizado o leilão. Apenas para leilões presenciais.String com tamanho máximo de 150 caracteres.
+
+- **online**: Campo boolean que indica se os compradores poderão enviar lances online. O valor default para este campo é **true**.
+
+- **presencial**: Campo boolean que indica se o leilão será realizado presencialmente. O valor default para este campo é **false**.
+
+
 Para facilitar a validação e a identificação precoce de erros nesse arquivo nós criamos um schema JSON para este JSON.
 Um schema define o formato do arquivo, como quais os campos, tipos de dados e tamanho máximo permitidos.
 Você pode verificar o schema de leilões em  **schemas/leilao.json**. Você encontra mais informações sobre o que é e como
@@ -27,7 +54,7 @@ funciona um "JSON Schema" no [site do projeto](http://json-schema.org/).
 
 
 ### Arquivo de exemplo:
-Abaixo  está um exemplo de como ficará o seu arquivo. Observe que a data e hora precisam estar no formato rfc3339 com o fuso horário especificado. Os acentos e caracteres especiais devem ser codificados.
+Abaixo  está um exemplo de como ficará o seu arquivo. Observe que os acentos e caracteres especiais devem ser codificados.
 
 ```json
 [
@@ -40,7 +67,10 @@ Abaixo  está um exemplo de como ficará o seu arquivo. Observe que a data e hor
     "datahora_encerramento": "2015-09-30T14:00:00+03:00",
     "cidade": "Florian\u00f3polis",
     "estado": "SC",
-    "endereco": "Local do Leilao"
+    "endereco": "Local do Leilao",
+    "presencial": true,
+    "online": true,
+    "presencial": true
   },
   {
     "id_leilao": "2",
