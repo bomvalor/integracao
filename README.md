@@ -9,16 +9,21 @@ Nós estamos sempre abertos a novas parcerias e a publicação de novos leilões
 
 A primeira coisa que você precisa fazer é entrar em contato com a gente. Mande um email para [contato@bomvalor.com](contato@bomvalor.com) com o endereço do seu site.
 
-Depois você vai precisar criar duas páginas no seu site com um formato específico ([JSON](https://pt.wikipedia.org/wiki/JSON)). Provavelmente você vai precisar da ajuda de algum programador. Em uma das página estarão as informações sobre os leilões e na outra as informações sobre os lotes. Nas próximas seções você encontrará mais detalhes sobre como essas páginas precisam ser criadas.
+Depois você vai precisar criar duas páginas no seu site com um formato específico ([JSON](https://pt.wikipedia.org/wiki/JSON)).
+Provavelmente você vai precisar da ajuda de algum programador. Em uma das página estarão as informações sobre os leilões e na
+outra as informações sobre os lotes. Nas próximas seções você encontrará mais detalhes sobre como essas páginas precisam ser criadas.
 
-Depois de criadas as páginas você precisa enviar para nós o endereço em que elas foram publicadas. À partir dai nós iremos fazer a leitura destes arquivos todos os dias e seus leilões serão mostrados no Bomvalor.
+Depois de criadas as páginas você precisa enviar para nós o endereço em que elas foram publicadas.
+À partir dai nós iremos fazer a leitura destes arquivos todos os dias e seus leilões serão mostrados no Bomvalor.
 
 ## Leilões
 
 A primeira página que você precisa criar é a que mostrará os dados dos leilões. Esta página deve conter um arquivo JSON com os dados do leilão.
 
 Para facilitar a validação e a identificação precoce de erros nesse arquivo nós criamos um schema JSON para este JSON.
-Um schema define o formato do arquivo, como quais os campos, tipos de dados e tamanho máximo permitidos. Você pode verificar o schema de leilões em  **schemas/leilao.json**. Você encontra mais informações sobre JSON Schema no [site do projeto](http://json-schema.org/).
+Um schema define o formato do arquivo, como quais os campos, tipos de dados e tamanho máximo permitidos.
+Você pode verificar o schema de leilões em  **schemas/leilao.json**. Você encontra mais informações sobre o que é e como
+funciona um "JSON Schema" no [site do projeto](http://json-schema.org/).
 
 
 ### Arquivo de exemplo:
