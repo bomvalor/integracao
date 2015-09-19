@@ -15,7 +15,10 @@ Depois de criadas as páginas você precisa enviar para nós o endereço em que 
 
 ## Leilões
 
-A primeira página que você precisa criar é a que mostrará os dados dos leilões.Esta página deve conter um arquivo JSON com os dados do leilão. O formato do arquivo é um array de objetos. Cada objeto desse array deverá respeitar o schema definido no arquivo **schemas/leilao.json**.
+A primeira página que você precisa criar é a que mostrará os dados dos leilões. Esta página deve conter um arquivo JSON com os dados do leilão.
+
+Para facilitar a validação e a identificação precoce de erros nesse arquivo nós criamos um schema JSON para este JSON.
+Um schema define o formato do arquivo, como quais os campos, tipos de dados e tamanho máximo permitidos. Você pode verificar o schema de leilões em  **schemas/leilao.json**. Você encontra mais informações sobre JSON Schema no [site do projeto](http://json-schema.org/).
 
 
 ### Arquivo de exemplo:
@@ -55,7 +58,7 @@ O formato do arquivo é parecido com o arquivo de leilões. Também é um array 
 
 ### Arquivo de exemplo:
 
-Abaixo o exemplo de como ficará o seu arquivo. 
+Abaixo o exemplo de como ficará o seu arquivo.
 
 ```json
 [
