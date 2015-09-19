@@ -1,0 +1,49 @@
+[
+  {
+    "id_lote": "123",
+    "id_leilao": "1",
+    "url": "http://www.seusite.com.br/detalhe-do-lote/?id=123&leilao=1",
+    "numero_lote": "1",
+    "titulo": "Titulo do lote claro e direto",
+    "descricao": "Texto longo com com descri\\u00e7\\u00e3o do lote. Utilizar \\n para pular linhas.",
+    "comitente": "Nome do Comitente",
+    "visitacao_permitida": true,
+    "status":  "disponivel",
+    "valor_lance_inicial": 1234000.00,
+    "valor_lance_atual": 12345000.00,
+    "datahora_abertura": "2015-01-01T00:00:00+03:00",
+    "datahora_encerramento": "2016-01-01T15:00:00+03:00",
+    "nome_cidade": "S\\u00e3o Paulo",
+    "estado": "SP",
+    "subcategoria": "Automoveis",
+    "imagens": [
+      { "url": "http://www.seusite.com.br/imagens/lote123/1.jpg" },
+      { "url": "http://www.seusite.com.br/imagens/lote123/2.jpg" },
+      { "url": "http://www.seusite.com.br/imagens/lote123/3.jpg" }
+    ]
+  },
+  {
+    "id_lote": "124",
+    "id_leilao": "1",
+    "url": "http://www.seusite.com.br/detalhe-do-lote/?id=124&leilao=1",
+    "numero_lote": "2",
+    "titulo": "Titulo de outro lote claro e direto",
+    "descricao": "Texto longo com com descri\\u00e7\\u00e3o do lote. Utilizar \\n para pular linhas.",
+    "comitente": "Nome do Comitente",
+    "visitacao_permitida": true,
+    "status":  "disponivel",
+    "valor_lance_inicial": 12340.00,
+    "valor_lance_atual": 12340.00,
+    "datahora_abertura": "2015-01-01T00:00:00+03:00",
+    "datahora_encerramento": "2016-01-01T15:30:00+03:00",
+    "nome_cidade": "Campinas",
+    "estado": "SP",
+    "subcategoria": "Apartamentos",
+    "imagens": [
+      { "url": "http://www.seusite.com.br/imagens/lote-124/1.jpg" },
+      { "url": "http://www.seusite.com.br/imagens/lote-124/2.jpg" },
+      { "url": "http://www.seusite.com.br/imagens/lote-124/3.jpg" },
+      { "url": "http://www.seusite.com.br/imagens/lote-124/4.jpg" },
+    ]
+  }
+]

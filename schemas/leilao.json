@@ -1,0 +1,45 @@
+{
+  "title": "Schema para json com dados de leilão",
+  "type": "object",
+  "properties": {
+    "id_leilao": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 200
+    },
+    "titulo": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "descricao": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "datahora_abertura": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datahora_encerramento": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "cidade": {
+      "type": "string",
+      "maxLength": 70,
+      "minLength": 1
+    },
+    "estado": {
+      "type": "string",
+      "pattern": "(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)"
+    },
+    "endereco": {
+      "type": "string",
+      "maxLength": 150
+    }
+  },
+  "required": ["id_leilao", "url", "titulo", "datahora_encerramento"]
+}

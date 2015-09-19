@@ -1,0 +1,125 @@
+{
+  "title": "Schema para json com dados de lote",
+  "type": "object",
+  "properties": {
+    "id_lote": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "id_leilao": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 200
+    },
+    "numero_lote": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "titulo": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "descricao": {
+      "type": "string",
+      "maxLength": 3000
+    },
+    "leiloeiro": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "comitente": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "status": {
+      "type": "string",
+      "pattern": "(disponivel|encerrado|suspenso|arrematado|propostas)"
+    },
+    "visitacao_permitida": {
+      "type": "boolean"
+    },
+    "datahora_abertura": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datahora_encerramento": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "valor_lance_inicial": {
+      "type": "number"
+    },
+    "datahora_abertura_2": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datahora_encerramento_2": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "valor_lance_inicial_2": {
+      "type": "number"
+    },
+    "valor_lance_atual": {
+      "type": "number"
+    },
+    "nome_cidade": {
+      "type": "string",
+      "maxLength": 70,
+      "minLength": 1
+    },
+    "estado": {
+      "type": "string",
+      "pattern": "(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)"
+    },
+    "endereco": {
+      "type": "string",
+      "maxLength": 150
+    },
+    "qtd_lances": {
+      "type": "number"
+    },
+    "qtd_visualizacoes": {
+      "type": "number"
+    },
+    "subcategoria": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "imagens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": ["url"]
+      }
+    }
+  },
+  "required": [
+    "id_lote",
+    "id_leilao",
+    "url",
+    "numero_lote",
+    "titulo",
+    "descricao",
+    "status",
+    "visitacao_permitida",
+    "valor_lance_inicial",
+    "datahora_encerramento",
+    "valor_lance_atual",
+    "qtd_lances",
+    "nome_cidade",
+    "estado",
+    "subcategoria"
+  ]
+}
